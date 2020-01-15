@@ -24,18 +24,13 @@ note left: 1st request
 "lambda.Start(Handler)" -> "Handler()"
 "Handler()" --> "lambda": response
 
-newpage
-
 autonumber
 "lambda" -> "Handler()": Lambda Call 2nd. request
 note left: 2nd... request
 
 "Handler()" --> "lambda": response
 
-newpage
-
 autonumber
 "lambda.Start(Handler)" -->x "main()"
-note right: kill container
-
+note right: kill container?
 @enduml

@@ -10,3 +10,5 @@ $ mage build
 ## lambda
 * runtime: Go 1.x
 * handler: main
+
+![sequence dialog](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/tomtwinkle/lambda-go-lifecycle-poc/master/lifecycle.puml)
