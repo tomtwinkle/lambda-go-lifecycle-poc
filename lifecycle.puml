@@ -1,0 +1,41 @@
+@startuml
+skinparam sequence {
+          'オブジェクト
+          ParticipantBorderColor Red
+          ParticipantBackgroundColor White
+          ParticipantFontSize 20
+
+          '矢印
+          ArrowColor DeepSkyBlue
+          ActorBorderColor DeepSkyBlue
+
+          'ライフライン
+          LifeLineBorderColor black
+}
+
+actor lambda
+
+autonumber
+"lambda" -> "init()": Lambda Call
+note left: 1st request
+
+"init()" -> "main()"
+"main()" -> "lambda.Start(Handler)"
+"lambda.Start(Handler)" -> "Handler()"
+"Handler()" --> "lambda": response
+
+newpage
+
+autonumber
+"lambda" -> "Handler()": Lambda Call 2nd. request
+note left: 2nd... request
+
+"Handler()" --> "lambda": response
+
+newpage
+
+autonumber
+"lambda.Start(Handler)" -->x "main()"
+note right: kill container
+
+@enduml
